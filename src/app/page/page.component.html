@@ -1,0 +1,60 @@
+<!--<table mdbTable>
+  <thead class="black white-text">
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let el of elements">
+      <th scope="row">{{el.id}}</th>
+      <td>{{el.first}}</td>
+      <td>{{el.last}}</td>
+      <td>{{el.handle}}</td>
+    </tr>
+  </tbody>
+</table>-->
+
+<style>
+.table-striped>tr:nth-child(odd){
+  background-color:red;
+}
+
+.mine {
+  color: chartreuse;
+}
+
+</style>
+
+
+<h1 style="color: black;">Profit/Loss Content</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col" >#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
