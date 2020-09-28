@@ -8,6 +8,8 @@ import {AppRoutingModule , RoutingComponents} from "./app-routing.module";
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { FinPortfolioComponent } from './fin-portfolio/fin-portfolio.component';
+
 
 
 
@@ -15,6 +17,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
    RoutingComponents,
+   FinPortfolioComponent,
    
   ],
   imports: [

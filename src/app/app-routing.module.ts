@@ -4,12 +4,14 @@ import { PageComponent} from "./page/page.component";
 
 import {FormComponent} from "./form/form.component";
 import {HistoryComponent} from "./history/history.component";
+import {FinPortfolioComponent} from "./fin-portfolio/fin-portfolio.component";
 
 
 const routes: Routes = [
     {path : 'page' , component: PageComponent},
     {path : 'form' , component: FormComponent},
     {path : 'history' , component: HistoryComponent},
+    {path : 'finalportfolio' , component: FinPortfolioComponent}
     
 ];
 

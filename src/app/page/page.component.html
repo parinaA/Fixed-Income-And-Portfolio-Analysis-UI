@@ -1,4 +1,46 @@
-<!--<table mdbTable>
+<style>
+  .table-striped>tr:nth-child(odd) {
+    background-color: red;
+  }
+
+  .mine {
+    color: chartreuse;
+  }
+
+  .heading {
+    color: black;
+    padding-left: 10px;
+    padding-top: 30px;
+  }
+
+  .bar {
+    padding-left: 100px;
+    margin-top: 50px;
+    display: block;
+    max-width: 750px;
+    max-height: 300px;
+
+  }
+
+  .export {
+    margin-top: 40px;
+    /* margin-left: 450px; */
+  }
+
+  .total {
+    margin-top: 20px;
+
+  }
+
+</style>
+
+<div>
+  <h2 class="heading">Profit/Loss Summary by Security
+  </h2>
+</div>
+
+
+<table mdbTable bordered="true">
   <thead class="black white-text">
     <tr>
       <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -10,51 +52,28 @@
       <td>{{el.first}}</td>
       <td>{{el.last}}</td>
       <td>{{el.handle}}</td>
-    </tr>
-  </tbody>
-</table>-->
-
-<style>
-.table-striped>tr:nth-child(odd){
-  background-color:red;
-}
-
-.mine {
-  color: chartreuse;
-}
-
-</style>
-
-
-<h1 style="color: black;">Profit/Loss Content</h1>
-
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col" >#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody >
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>{{el.total}}</td>
+      <!-- <td>first</td>
+      <td>second</td>
+      <td>thir</td> -->
     </tr>
   </tbody>
 </table>
 
+<div>
+  <canvas mdbChart class="bar" [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels"
+    [colors]="chartColors" [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)">
+  </canvas>
+</div>
+
+
+
+<div class="export" class="d-flex justify-content-end">
+  <button mdbBtn type="button" color="black" mdbWavesEffect>
+    <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Export to PDF
+  </button>
+  <button mdbBtn type="button" color="black" mdbWavesEffect>
+    <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Export to Excel
+  </button>
+</div>

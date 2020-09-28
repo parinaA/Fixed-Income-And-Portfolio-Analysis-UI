@@ -1,0 +1,45 @@
+<style>
+
+.head {
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.export {
+  margin-top: 40px;
+}
+
+</style>
+
+
+<div class="head">
+    <h2>End of Year Portfolio</h2>
+</div>
+
+<table mdbTable bordered="true">
+    <thead class="black white-text">
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of elements">
+        <th scope="row">{{el.id}}</th>
+        <td>{{el.first}}</td>
+        <td>{{el.last}}</td>
+        <td>{{el.handle}}</td>
+        <!-- <td>first</td>
+        <td>second</td>
+        <td>thir</td> -->
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="export" class="d-flex justify-content-end"> 
+    <button mdbBtn type="button" color="black" mdbWavesEffect>
+    <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Export to PDF
+  </button>
+  <button mdbBtn type="button" color="black" mdbWavesEffect>
+    <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Export to Excel
+  </button>
+  </div>
