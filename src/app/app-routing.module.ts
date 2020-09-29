@@ -4,12 +4,15 @@ import { PageComponent} from "./page/page.component";
 
 import {FormComponent} from "./form/form.component";
 import {HistoryComponent} from "./history/history.component";
+import {GeneratetradeComponent } from "./generatetrade/generatetrade.component";
+import { generate } from 'rxjs';
 
 
 const routes: Routes = [
     {path : 'page' , component: PageComponent},
     {path : 'form' , component: FormComponent},
     {path : 'history' , component: HistoryComponent},
+    {path : 'generate' , component: GeneratetradeComponent},
     
 ];
 
@@ -18,4 +21,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponents = [PageComponent ,FormComponent , HistoryComponent];
+export const RoutingComponents = [PageComponent ,FormComponent , HistoryComponent , GeneratetradeComponent];

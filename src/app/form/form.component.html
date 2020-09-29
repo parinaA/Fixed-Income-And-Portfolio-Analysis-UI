@@ -1,28 +1,66 @@
 
 <div class="container" >
+
+  <h5 style="margin-bottom: 17px; "><u>Available balance</u> :</h5>
+<div id ="balance"></div>
     <form>
-      <label for="fname" style= "margin-bottom: -2px;">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+     
   
-      <label for="lname" style= "margin-bottom: -2px;">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
 
-      <label for="quantity" style= "margin-bottom: -2px;">Quantity</label>
-      <input name = "quantity" id = "quantity"  type="text" placeholder="Total Quantity">
-  
-      <label for="security" style= "margin-bottom: -2px;">Security</label>
-  <select name="security" id="security" style="margin-bottom: 10px;">
+
+  <h5 for="issuers" style= "margin-bottom: -3px;">Security</h5>
+  <select name="issuers" id="issuers" style="margin-bottom: 10px;">
    
-    <option value="T-bills">T-bills</option>
-    <option value="jinx bonds">jinx bonds</option>
-    <option value="Municipal bonds">Municipal bonds</option>
+    <option value="Government">Govt T-Bill</option>
+    <option value="Government">Govt G-Sec</option>
+    <option value="CB">Canara Bank Certificate of Deposit</option>
+    <option value = "LS">Lenskart Corporate Bond </option>
+    <option value = "LS">Asian Paints Commercial Paper</option>
+    <option value = "LS">Zomato Corporate Bond </option>
+    <option value = "LS">Hero Motocorp Commercial Paper</option>    
+    <option value = "LS">Bajaj Finserv Certificate of Deposit</option>
+    <option value = "LS">Reliance Corporate Bond </option>
+    <option value = "LS">Ahemdabad Municipal Corporation Municipal Bond</option>
+    <option value = "LS">Pune Municipal Corporation Municipal Bond</option>
+    
   </select>
+ 
+<div style="clear: both; margin-top: 20px;">
+  <h5 style="float: left">Shares Own</h5>
+  <h5 style="float: right">Current Price</h5>
+</div>
 
-  <aside>
-  <h2 style="margin-bottom: 8px;">Buy/Sell</h2>
+<div style="clear: both">
+  <h5 style="float: left">-------</h5>
+  <h5 style="float: right">------</h5>
+</div>
+ 
+
   
 
-    <div class="onoffswitch">
+  
+
+  <!--<label for="fname" style= "margin-bottom: -2px;">First Name</label>
+  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+  <label for="lname" style= "margin-bottom: -2px;">Last Name</label>
+  <input type="text" id="lname" name="lastname" placeholder="Your last name..">-->
+
+ <!--- <label for="quantity" style= "margin-bottom: -2px;">Quantity</label> -->
+  <input name = "quantity" id = "quantity"  type="text" placeholder="Total Quantity">
+<div style = "clear:both;margin-top: 30px; margin-bottom: 70px;">
+  <h6 style=" float: left;" >Total Transaction :</h6>
+  <h6 style = "float:right;">----------------------------------</h6>
+
+</div>
+ 
+
+  <div style="clear: both;margin-top: 30px;">
+  <h4 style="margin-bottom: 8px; float: left; margin-right: 150px;"><u>Buy/Sell</u></h4>
+  
+
+    <div class="onoffswitch" style="float: left">
        
         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
         <label class="onoffswitch-label" for="myonoffswitch">
@@ -31,13 +69,24 @@
         </label>
     </div>
 
-</aside>
+  </div>
+
+  
+  
+
+  <h6>Error if any</h6>
+
 
 
     
       <input type="submit" value="Submit">
     </form>
   </div>
+
+  <script>
+    function copy() { document.getElementById("label").innerHTML=document.getElementById("mySelect").value
+}
+  </script>
 
 
 

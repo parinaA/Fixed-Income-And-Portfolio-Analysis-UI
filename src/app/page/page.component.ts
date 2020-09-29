@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NGXLogger} from 'ngx-logger';
 
 @Component({
   selector: 'app-page',
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page.component.scss']
 })
 export class PageComponent implements OnInit {
-
-  constructor() { }
+  constructor(private logger:NGXLogger) { }
 
   ngOnInit(): void {
+    this.logger.debug('informcomponent.init');
   }
+
 
   
 

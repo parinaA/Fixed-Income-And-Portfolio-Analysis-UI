@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {NGXLogger} from 'ngx-logger';
 @Component({
   selector: 'app-screen',
   templateUrl: './screen.component.html',
@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private logger:NGXLogger) { }
 
   ngOnInit(): void {
+    this.logger.debug('informcomponent.init');
   }
+
 
   elements: any = [
     {id: 1, first: 'Mark', last: 'Otto', handle: '@mdo'},

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {NGXLogger} from 'ngx-logger';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private logger:NGXLogger) { }
 
   ngOnInit(): void {
+    this.logger.debug('informcomponent.init');
   }
+
+  
 
 }
