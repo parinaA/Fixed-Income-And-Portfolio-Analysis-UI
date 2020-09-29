@@ -13,7 +13,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { GeneratetradeComponent } from './generatetrade/generatetrade.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoggerModule, NgxLoggerLevel } from 'ngx-logger'; 
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { PortfolioComponent } from './portfolio/portfolio.component'; 
 
 
 
@@ -23,6 +24,7 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     AppComponent,
    RoutingComponents,
    GeneratetradeComponent,
+   PortfolioComponent,
    
   ],
   imports: [

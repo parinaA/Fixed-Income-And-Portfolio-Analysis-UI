@@ -1,0 +1,64 @@
+<style>
+
+    .head {
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+    
+    .export {
+      margin-top: 40px;
+    }
+
+    td{
+        font-weight: 500;
+    }
+    table, td {
+  border: 1px solid black;}
+
+    
+    
+    </style>
+    
+    
+    <div class="head">
+        <h2>End of Year Portfolio</h2>
+    </div>
+
+    <table mdbTable bordered = "true"  >
+        <thead class="black white-text">
+          <tr>
+            <th scope="col">ISIN</th>
+            <th scope="col">Security</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Issuer</th>
+           
+         </tr>
+        </thead>
+        <tbody>
+         
+          <tr>
+          
+            <td>1011167932</td>
+            <td>T-Bills</td>
+            <td>32</td>
+            <td>Government</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    
+   
+    
+      <div class="export" class="d-flex justify-content-end"> 
+        <button mdbBtn type="button" color="black" mdbWavesEffect>
+        <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Export to PDF
+      </button>
+      <button mdbBtn type="button" color="black" mdbWavesEffect>
+        <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Export to Excel
+      </button>
+
+
+
+
+      </div>
+    

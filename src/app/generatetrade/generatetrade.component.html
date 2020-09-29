@@ -3,7 +3,7 @@
     td{
         font-weight: 500;
     }
-    table, td {
+    table, td , th {
   border: 1px solid black;
 }
 </style>
@@ -42,54 +42,34 @@
   <h2 style = "font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-top: 20px; margin-bottom: 20px;"><u>Trades in FY 2020-21</u></h2>
 
   
-
-
-<table mdbTable bordered = "true"  >
+  <table mdbTable bordered="true" >
     <thead class="black white-text">
-      <tr>
-        <th scope="col">ISIN</th>
-        <th scope="col">Security Name</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">BUy/Sell</th>
-        <th scope="col">Price Per Security</th>
+      <tr><th scope="col">Security</th>
+        <th scope="col">TradeID</th>
+        <th scope="col">Issuer</th>
         <th scope="col">Trade Date</th>
+        <th scope="col">ISIN</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Buy/Sell</th>
       </tr>
     </thead>
     <tbody>
-     
-      <tr>
-      
-        <td>1011167932</td>
-        <td>T-Bills</td>
-        <td>32</td>
-        <td>Buy</td>
-        <td>INR 2300</td>
-        <td>23/11/1018</td>
+      <tr mdbTableCol *ngFor="let trade of getData">
+        <td scope="row">{{trade.security}}</td>
+        <td style = "font-weight: 500;">{{trade.tradeId}}</td>
+        <td style="font-weight: 500;">{{trade.issuerName}}</td>
+        <td style = "font-weight: 500;">{{trade.tradeDate}}</td>
+        <td style = "font-weight: 500;">{{trade.isin}}</td>
+        <td style = "font-weight: 500;">{{trade.quantity}}</td>
+        <td style = "font-weight: 500;">{{trade.price}}</td>
+        <td style = "font-weight: 500;">{{trade.buy}}</td>
       </tr>
     </tbody>
+    
   </table>
 
-  <h1>FOR TESTING PURPOSES</h1>
 
- 
-
-<table mdbTable bordered = "true" >
-    <thead class="black white-text">
-      <tr>
-        <th scope="col">Security</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">Buy/Sell</th>
-       </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        
-    </tbody>
-    </table>
 
     </div>
 

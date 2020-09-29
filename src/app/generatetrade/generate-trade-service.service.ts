@@ -12,7 +12,7 @@ export class GenerateTradeServiceService {
   //get // fetch // JSON Server URL here for Fetch the data
 getUserDetails() {
   return this.http.get
-  ('http://localhost:7000/users/list');         
+  ('http://localhost:8082/demo/all'); 
 }
 
 }
