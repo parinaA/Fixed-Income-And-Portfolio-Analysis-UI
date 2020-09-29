@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NGXLogger} from 'ngx-logger';
+import { HttpClient } from '@angular/common/http';
+import {GenerateTradeServiceService} from './generate-trade-service.service';
 
 @Component({
   selector: 'app-generatetrade',
@@ -8,12 +10,8 @@ import {NGXLogger} from 'ngx-logger';
 })
 export class GeneratetradeComponent implements OnInit {
 
-  constructor(private logger:NGXLogger) { }
-
-  ngOnInit(): void {
-    this.logger.debug('informcomponent.init');
-  }
-
+  //users:any;
+  getData:any[];
 
   elements: any = [
     {id: 1011145789, first: 'T-Bill', last: ' 178', handle: '20/10/2019', total: 'INR 23,000'},
@@ -23,8 +21,24 @@ export class GeneratetradeComponent implements OnInit {
 
   headElements = ['ISIN', 'Security', 'Quantity Brought', 'Trade Date', 'Buy-Price'];
 
-  public chartType: string = 'bar';
+
+  constructor(private logger:NGXLogger, private _httpService:GenerateTradeServiceService) { }
+
+  ngOnInit(): void {
+    this.logger.debug('informcomponent.init');
+ }
+
+  getUser(){
+
+    this._httpService.getUserDetails().subscribe((res : any[])=>{
+             //console.log(res);
+             this.logger.debug(res);
+       this.getData = res;
+  
+  });
+
+  
 
  
 
-}
+  }}
