@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { GeneratetradeComponent } from './generatetrade/generatetrade.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
-import { PortfolioComponent } from './portfolio/portfolio.component'; 
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import {PageComponent } from './page/page.component';
+//import { TestComponent } from './test/test.component'; 
 
 
 
@@ -25,6 +27,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
    RoutingComponents,
    GeneratetradeComponent,
    PortfolioComponent,
+  
    
   ],
   imports: [
@@ -34,6 +37,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxPaginationModule,
     LoggerModule.forRoot({serverLoggingUrl: '/users/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
 
   ],

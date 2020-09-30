@@ -39,46 +39,47 @@
 
 </style>
 
-<div>
-  <h2 class="heading">Profit/Loss Summary by Security
+<div style="clear: both; margin-top: 20px ; margin-bottom: 30px;">
+
+  <h2 style = "float:left" class="heading">Profit/Loss Summary by Security
   </h2>
+
+
+    
 </div>
 
-
-<table mdbTable bordered="true">
+<table mdbTable bordered = "true"  >
   <thead class="black white-text">
     <tr>
-      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
-    </tr>
+      <th scope="col">ISIN</th>
+      <th scope="col">Security</th>
+      <th scope="col">Balance</th>
+      <th scope="col">Maturity Date</th>
+     
+   </tr>
   </thead>
   <tbody>
-    <tr mdbTableCol *ngFor="let el of elements">
-      <th scope="row">{{el.id}}</th>
-      <td>{{el.first}}</td>
-      <td>{{el.last}}</td>
-      <td>{{el.handle}}</td>
-      <td>{{el.total}}</td>
-      <!-- <td>first</td>
-      <td>second</td>
-      <td>thir</td> -->
-    </tr>
+   
+    <tr mdbTableCol *ngFor="let bal of getTable">
+      <td style = "font-weight: 500;">{{bal.isin}}</td>
+      <td style = "font-weight: 500;">{{bal.security}}</td>
+      <td style = "font-weight: 500;">{{bal.balance}}</td>
+      <td style = "font-weight: 500;">{{bal.maturityDate}}</td>
+      </tr>
   </tbody>
 </table>
 
-<div>
-  <canvas mdbChart class="bar" [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels"
-    [colors]="chartColors" [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)"
-    (chartClick)="chartClicked($event)">
-  </canvas>
-</div>
 
 
 
-<div class="export" class="d-flex justify-content-end">
-  <button mdbBtn type="button" color="black" mdbWavesEffect>
-    <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Export to PDF
-  </button>
-  <button mdbBtn type="button" color="black" mdbWavesEffect>
-    <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Export to Excel
-  </button>
-</div>
+
+
+
+
+<h4><u>Total Realized Profit</u> : <!---- {profit.profits}   --></h4>
+
+<h4><u>Total Coupon Accrued</u> :<!---- {coupons.couponpayment}   --> </h4>
+
+
+
+

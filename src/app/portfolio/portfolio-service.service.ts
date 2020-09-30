@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class GenerateTradeServiceService {
+export class PortfolioServiceService {
 
   constructor(private http:HttpClient) { }
 
-  //get // fetch // JSON Server URL here for Fetch the data
-getUserDetails() {
-  return  'Hello, welcome your service...';
+  getportfolio()
+  {
+    return this.http.get('whateverurlforportfolio.com')
+  }
 }
 
-}

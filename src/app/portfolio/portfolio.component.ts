@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PortfolioServiceService} from './portfolio-service.service';
+import {NGXLogger} from 'ngx-logger';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  getBalance:JSON[];
+
+  constructor(private logger:NGXLogger, private _httpService:PortfolioServiceService) { }
 
   ngOnInit(): void {
+
+    this._httpService.getportfolio().subscribe((res : any[])=>
+    {
+   // this.logger.debug(res);
+    this.getBalance = res;
+    });
+
   }
 
   elements: any = [

@@ -25,46 +25,38 @@
     
      
 
-      <!-- Dropdown -->
+      <!-- Dropdown 
       <li class="nav-item dropdown" dropdown>
+        <mdb-navbar-brand>
+
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          Summarize<span class="caret"></span></a>
+          Portfolio Report<span class="caret"></span></a></mdb-navbar-brand>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
           <a routerLink="/page" class="dropdown-item waves-light" mdbWavesEffect href="#">ProfitLoss</a>
           <a routerLink="/portfolio" class="dropdown-item waves-light" mdbWavesEffect href="#">Portfolio</a>
         </div>
       </li>
 
+    -->
+
       
 
     </ul>
     <!-- Links -->
 
+    
+
     <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon fab icon="twitter"></mdb-icon>
-        </a>
+      
+      <li class="nav-item dropdown" dropdown style="margin-right: 40px;">
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Portfolio Report<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a routerLink="/page" class="dropdown-item waves-light" mdbWavesEffect href="#">ProfitLoss</a>
+          <a routerLink="/portfolio" class="dropdown-item waves-light" mdbWavesEffect href="#">Portfolio</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon fab icon="google-plus"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <div class="btn-group" mdbDropdown>
-            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
-            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="divider dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </a>
-      </li>
+      
     </ul>
   </links>
   <!-- Collapsible content -->
@@ -74,4 +66,6 @@
 
 <!--<div class="bg"></div>-->
 
+
 <router-outlet></router-outlet>
+

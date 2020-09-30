@@ -8,17 +8,23 @@
 }
 </style>
 
-<div style = "margin: 20px; padding: 12px;">
-    <div class="export" class="d-flex justify-content-end">
-        <button mdbBtn type="button" color="black" mdbWavesEffect>
+<div style="clear: both; margin-top: 20px;">
+  <h2 style = "font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 20px;float:left; margin-bottom: 20px;"><u>Opening Securities Balance</u></h2>
+
+
+
+    <div class="export" class="d-flex justify-content-end" style = "margin: 20px; float:right;padding: 12px;">
+        
+        <button mdbBtn type="button" color="black" mdbWavesEffect (click)="ServiceOnButtonClick()">
+
           <mdb-icon fas icon="magic" class="mr-1"></mdb-icon>Generate Trades
         </button>
        
-      </div>
+       
+      
 
 
-<h2 style = "font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-bottom: 20px;"><u>Opening Securities Balance</u></h2>
-    
+</div>
 
 
 <table mdbTable bordered="true"  >
@@ -28,7 +34,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr mdbTableCol *ngFor="let el of elements">
+     
+        <tr mdbTableCol *ngFor="let el of elements">
         <th scope="row">{{el.id}}</th>
         <td style = "font-weight: 500;">{{el.first}}</td>
         <td style="font-weight: 500;">{{el.last}}</td>

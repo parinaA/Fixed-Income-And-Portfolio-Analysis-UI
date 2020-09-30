@@ -18,7 +18,8 @@
     
     
     </style>
-    
+
+    <div>    
     
     <div class="head">
         <h2>End of Year Portfolio</h2>
@@ -29,20 +30,19 @@
           <tr>
             <th scope="col">ISIN</th>
             <th scope="col">Security</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Issuer</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Maturity Date</th>
            
          </tr>
         </thead>
         <tbody>
          
-          <tr>
-          
-            <td>1011167932</td>
-            <td>T-Bills</td>
-            <td>32</td>
-            <td>Government</td>
-          </tr>
+          <tr mdbTableCol *ngFor="let bal of getBalance">
+            <td style = "font-weight: 500;">{{bal.isin}}</td>
+            <td style = "font-weight: 500;">{{bal.security}}</td>
+            <td style = "font-weight: 500;">{{bal.balance}}</td>
+            <td style = "font-weight: 500;">{{bal.maturityDate}}</td>
+            </tr>
         </tbody>
       </table>
     
@@ -58,7 +58,9 @@
       </button>
 
 
+      
+
 
 
       </div>
-    
+    </div>
